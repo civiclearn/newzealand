@@ -124,7 +124,13 @@
       display: flex; align-items: center; gap: 0.6rem;
       font-weight: 700; font-size: 1.05rem; color: var(--primary);
     }
-    .cl-logo .fern { width: 28px; height: 28px; display: block; }
+    .cl-logo .cl-flag {
+      height: 20px;
+      width: auto;
+      display: block;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+    }
     .cl-nav { display: flex; gap: 1.6rem; align-items: center; }
     .cl-nav a {
       font-size: 0.92rem; font-weight: 500;
@@ -642,11 +648,7 @@
   <div class="cl-header-inner">
 
     <a href="/" class="cl-logo">
-      <svg class="fern" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g fill="#1a1a1a">
-          <path d="M16 2 C 16 2, 8 8, 6 16 C 8 14, 10 13, 12 13 C 10 16, 9 19, 9 22 C 11 19, 13 17, 15 16 C 14 19, 14 22, 15 25 C 16 22, 17 19, 18 17 C 19 19, 20 22, 21 24 C 21 21, 21 18, 20 15 C 22 16, 24 18, 26 19 C 24 16, 22 13, 19 12 C 21 11, 23 11, 25 12 C 23 9, 19 5, 16 2 Z"/>
-        </g>
-      </svg>
+      <img class="cl-flag" src="/assets/images/nz.svg" alt="New Zealand flag" width="40" height="20" />
       <span>Citizenship-Test.nz</span>
     </a>
 
