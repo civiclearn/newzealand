@@ -969,12 +969,11 @@
 </script>
 
 <!-- ===============================
-   WAITLIST FORM → SUPABASE
+   WAITLIST FORM → N8N → GOOGLE SHEET
 ================================== -->
 <script>
-const SUPABASE_URL  = 'https://htgliokekeaovdiafrgs.supabase.co';
-const SUPABASE_ANON = '__REPLACE_WITH_ANON_KEY__';
-const WAITLIST_TABLE = 'nz_waitlist';
+const WAITLIST_WEBHOOK = 'https://civiclearn.app.n8n.cloud/webhook/nz-waitlist';
+const WAITLIST_SOURCE  = 'citizenship-test.nz/articles/nz-vs-australia';
 
 (function(){
   var form = document.getElementById('waitlistForm');
@@ -996,17 +995,12 @@ const WAITLIST_TABLE = 'nz_waitlist';
     status.className = 'waitlist-status';
 
     try {
-      var res = await fetch(SUPABASE_URL + '/rest/v1/' + WAITLIST_TABLE, {
+      var res = await fetch(WAITLIST_WEBHOOK, {
         method: 'POST',
-        headers: {
-          'apikey': SUPABASE_ANON,
-          'Authorization': 'Bearer ' + SUPABASE_ANON,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email: email,
-          source: 'citizenship-test.nz/articles/nz-vs-australia',
+          source: WAITLIST_SOURCE,
           user_agent: navigator.userAgent,
           locale: navigator.language || ''
         })
@@ -1014,12 +1008,6 @@ const WAITLIST_TABLE = 'nz_waitlist';
 
       if (res.ok) {
         status.textContent = '✓ You\'re on the list. We\'ll be in touch.';
-        status.className = 'waitlist-status success';
-        form.reset();
-        submit.textContent = 'Notify me';
-        submit.disabled = false;
-      } else if (res.status === 409 || res.status === 400) {
-        status.textContent = '✓ You\'re already on the list.';
         status.className = 'waitlist-status success';
         form.reset();
         submit.textContent = 'Notify me';
