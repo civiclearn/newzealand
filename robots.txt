@@ -1,0 +1,6 @@
+# https://citizenship-test.nz/robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://citizenship-test.nz/sitemap.xml
