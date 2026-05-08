@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Honeycomb of six hexagons representing the six topic areas of the New Zealand citizenship test">
+  <rect width="800" height="450" fill="#f5f0e6"/>
+
+  <text x="400.0" y="60" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="12" fill="#c8102e" letter-spacing="3">SIX TOPIC AREAS</text>
+
+  <polygon points="266.9,138.4 317.2,167.4 317.2,225.4 266.9,254.4 216.7,225.4 216.7,167.4" fill="#0d4f4a" stroke="#0d4f4a" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="266.9" y="178.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="800" font-size="22" fill="#fff" letter-spacing="1">01</text>
+  <text x="266.9" y="204.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="rgba(255,255,255,0.92)">Bill of</text>
+  <text x="266.9" y="221.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="rgba(255,255,255,0.92)">Rights</text>
+  <polygon points="373.4,138.4 423.6,167.4 423.6,225.4 373.4,254.4 323.2,225.4 323.2,167.4" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="373.4" y="178.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="800" font-size="22" fill="#c8102e" letter-spacing="1">02</text>
+  <text x="373.4" y="204.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#1a1a1a">Criminal</text>
+  <text x="373.4" y="221.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#1a1a1a">offences</text>
+  <polygon points="479.8,138.4 530.1,167.4 530.1,225.4 479.8,254.4 429.6,225.4 429.6,167.4" fill="#0d4f4a" stroke="#0d4f4a" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="479.8" y="178.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="800" font-size="22" fill="#fff" letter-spacing="1">03</text>
+  <text x="479.8" y="204.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="rgba(255,255,255,0.92)">Voting</text>
+  <text x="479.8" y="221.4" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="rgba(255,255,255,0.92)">rights</text>
+  <polygon points="320.2,219.6 370.4,248.6 370.4,306.6 320.2,335.6 269.9,306.6 269.9,248.6" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="320.2" y="259.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="800" font-size="22" fill="#c8102e" letter-spacing="1">04</text>
+  <text x="320.2" y="285.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#1a1a1a">Democratic</text>
+  <text x="320.2" y="302.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#1a1a1a">principles</text>
+  <polygon points="426.6,219.6 476.8,248.6 476.8,306.6 426.6,335.6 376.4,306.6 376.4,248.6" fill="#0d4f4a" stroke="#0d4f4a" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="426.6" y="259.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="800" font-size="22" fill="#fff" letter-spacing="1">05</text>
+  <text x="426.6" y="285.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="rgba(255,255,255,0.92)">Structure of</text>
+  <text x="426.6" y="302.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="rgba(255,255,255,0.92)">government</text>
+  <polygon points="533.1,219.6 583.3,248.6 583.3,306.6 533.1,335.6 482.8,306.6 482.8,248.6" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="533.1" y="259.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="800" font-size="22" fill="#c8102e" letter-spacing="1">06</text>
+  <text x="533.1" y="285.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#1a1a1a">Travel to</text>
+  <text x="533.1" y="302.6" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="600" font-size="13" fill="#1a1a1a">and from NZ</text>
+
+  <text x="400.0" y="400" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">What you&#x2019;ll be tested on</text>
+
+  <g transform="translate(58, 388)" stroke="#0d4f4a" fill="none" stroke-linecap="round" opacity="0.7">
+    <circle cx="0" cy="0" r="14" stroke-width="3"/>
+    <circle cx="0" cy="0" r="6" stroke-width="3"/>
+    <circle cx="0" cy="0" r="1.5" fill="#0d4f4a" stroke="none"/>
+  </g>
+</svg>
