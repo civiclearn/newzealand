@@ -8,5 +8,25 @@
     "date": "2026-05-08",
     "readingTime": "7 min",
     "lang": "en"
+  },
+  {
+    "slug": "how-the-test-works",
+    "title": "How the new NZ citizenship test works",
+    "excerpt": "What to expect on test day: booking, the test centre, the 45 minutes, getting your result, and what happens if you need a re-attempt.",
+    "image": "/assets/images/articles/how-the-test-works.svg",
+    "category": "Format & process",
+    "date": "2026-05-08",
+    "readingTime": "8 min",
+    "lang": "en"
+  },
+  {
+    "slug": "who-is-exempt",
+    "title": "Who is exempt from the NZ citizenship test?",
+    "excerpt": "Children, older applicants, and people using certain pathways are exempt. The full list, with a self-check guide and explanations for each category.",
+    "image": "/assets/images/articles/who-is-exempt.svg",
+    "category": "Eligibility",
+    "date": "2026-05-08",
+    "readingTime": "6 min",
+    "lang": "en"
   }
 ]

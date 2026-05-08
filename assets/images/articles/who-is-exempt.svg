@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Diagram showing who needs to take the New Zealand citizenship test, with most applicants required and several categories of exemption">
+  <rect width="800" height="450" fill="#f5f0e6"/>
+
+  <text x="400.0" y="60" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="12" fill="#c8102e" letter-spacing="3">EXEMPTIONS</text>
+
+  <text x="250.0" y="170.0" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="10" fill="#1a1a1a" letter-spacing="1.2">UNDER 16</text>
+  <line x1="250.0" y1="178.0" x2="250.0" y2="185.0" stroke="#1a1a1a" stroke-width="1" opacity="0.3"/>
+  <text x="490.0" y="170.0" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="10" fill="#1a1a1a" letter-spacing="1.2">OVER 65</text>
+  <line x1="490.0" y1="178.0" x2="490.0" y2="185.0" stroke="#1a1a1a" stroke-width="1" opacity="0.3"/>
+  <text x="670.0" y="170.0" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="10" fill="#1a1a1a" letter-spacing="1.2">OTHER PATHWAY</text>
+  <line x1="670.0" y1="178.0" x2="670.0" y2="185.0" stroke="#1a1a1a" stroke-width="1" opacity="0.3"/>
+
+  <circle cx="130.0" cy="201.0" r="11.0" fill="#0d4f4a"/>
+  <path d="M 118.3 214.0 Q 115.0 214.0, 115.0 222.0 L 112.0 256.0 L 148.0 256.0 L 145.0 222.0 Q 145.0 214.0, 141.7 214.0 Z" fill="#0d4f4a"/>
+  <circle cx="190.0" cy="201.0" r="11.0" fill="#0d4f4a"/>
+  <path d="M 178.3 214.0 Q 175.0 214.0, 175.0 222.0 L 172.0 256.0 L 208.0 256.0 L 205.0 222.0 Q 205.0 214.0, 201.7 214.0 Z" fill="#0d4f4a"/>
+  <circle cx="250.0" cy="210.0" r="7.9" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 241.6 219.9 Q 239.2 219.9, 239.2 227.9 L 236.2 250.1 L 263.8 250.1 L 260.8 227.9 Q 260.8 219.9, 258.4 219.9 Z" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="310.0" cy="201.0" r="11.0" fill="#0d4f4a"/>
+  <path d="M 298.3 214.0 Q 295.0 214.0, 295.0 222.0 L 292.0 256.0 L 328.0 256.0 L 325.0 222.0 Q 325.0 214.0, 321.7 214.0 Z" fill="#0d4f4a"/>
+  <circle cx="370.0" cy="201.0" r="11.0" fill="#0d4f4a"/>
+  <path d="M 358.3 214.0 Q 355.0 214.0, 355.0 222.0 L 352.0 256.0 L 388.0 256.0 L 385.0 222.0 Q 385.0 214.0, 381.7 214.0 Z" fill="#0d4f4a"/>
+  <circle cx="430.0" cy="201.0" r="11.0" fill="#0d4f4a"/>
+  <path d="M 418.3 214.0 Q 415.0 214.0, 415.0 222.0 L 412.0 256.0 L 448.0 256.0 L 445.0 222.0 Q 445.0 214.0, 441.7 214.0 Z" fill="#0d4f4a"/>
+  <circle cx="490.0" cy="201.0" r="11.0" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 478.3 214.0 Q 475.0 214.0, 475.0 222.0 L 472.0 256.0 L 508.0 256.0 L 505.0 222.0 Q 505.0 214.0, 501.7 214.0 Z" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="550.0" cy="201.0" r="11.0" fill="#0d4f4a"/>
+  <path d="M 538.3 214.0 Q 535.0 214.0, 535.0 222.0 L 532.0 256.0 L 568.0 256.0 L 565.0 222.0 Q 565.0 214.0, 561.7 214.0 Z" fill="#0d4f4a"/>
+  <circle cx="610.0" cy="201.0" r="11.0" fill="#0d4f4a"/>
+  <path d="M 598.3 214.0 Q 595.0 214.0, 595.0 222.0 L 592.0 256.0 L 628.0 256.0 L 625.0 222.0 Q 625.0 214.0, 621.7 214.0 Z" fill="#0d4f4a"/>
+  <circle cx="670.0" cy="201.0" r="11.0" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 658.3 214.0 Q 655.0 214.0, 655.0 222.0 L 652.0 256.0 L 688.0 256.0 L 685.0 222.0 Q 685.0 214.0, 681.7 214.0 Z" fill="#fafaf8" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <text x="400.0" y="315.0" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">Who needs to take the test?</text>
+
+  <circle cx="281" cy="341.0" r="6" fill="#0d4f4a"/>
+  <text x="301" y="345.0" font-family="Lexend, sans-serif" font-weight="500" font-size="13" fill="#5a5a5a">Test required</text>
+  <circle cx="447" cy="341.0" r="6" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>
+  <text x="467" y="345.0" font-family="Lexend, sans-serif" font-weight="500" font-size="13" fill="#5a5a5a">Exempt</text>
+
+  <g transform="translate(58, 388)" stroke="#0d4f4a" fill="none" stroke-linecap="round" opacity="0.7">
+    <circle cx="0" cy="0" r="14" stroke-width="3"/>
+    <circle cx="0" cy="0" r="6" stroke-width="3"/>
+    <circle cx="0" cy="0" r="1.5" fill="#0d4f4a" stroke="none"/>
+  </g>
+</svg>
