@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Timeline showing the citizenship test deadline in late 2027">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f5f0e6"/>
+
+  <!-- Subtle background year -->
+  <text x="400" y="320" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="800" font-size="280" fill="#1a1a1a" opacity="0.04" letter-spacing="-12">2027</text>
+
+  <!-- Koru spiral on the left, representing growth/new beginnings -->
+  <g transform="translate(170, 225)">
+    <path d="M 84.9,61.7 L 89.1,54.4 L 92.6,46.8 L 95.4,38.9 L 97.6,31.0 L 99.2,22.9 L 100.1,14.8 L 100.3,6.7 L 99.9,-1.4 L 98.8,-9.3 L 97.1,-17.1 L 94.8,-24.7 L 91.9,-32.0 L 88.5,-39.0 L 84.5,-45.7 L 80.0,-52.0 L 75.1,-57.8 L 69.7,-63.2 L 64.0,-68.2 L 57.9,-72.6 L 51.6,-76.5 L 45.0,-79.8 L 38.2,-82.6 L 31.2,-84.8 L 24.1,-86.4 L 17.0,-87.5 L 9.9,-87.9 L 2.8,-87.8 L -4.3,-87.1 L -11.2,-85.9 L -17.9,-84.1 L -24.4,-81.8 L -30.6,-79.0 L -36.6,-75.7 L -42.2,-72.0 L -47.5,-67.9 L -52.4,-63.4 L -56.9,-58.5 L -60.9,-53.4 L -64.5,-47.9 L -67.6,-42.3 L -70.3,-36.4 L -72.4,-30.4 L -74.0,-24.3 L -75.1,-18.2 L -75.7,-12.0 L -75.8,-5.8 L -75.4,0.3 L -74.6,6.3 L -73.2,12.1 L -71.4,17.8 L -69.2,23.3 L -66.5,28.5 L -63.5,33.5 L -60.1,38.1 L -56.4,42.5 L -52.3,46.4 L -48.0,50.1 L -43.4,53.3 L -38.7,56.1 L -33.8,58.5 L -28.7,60.5 L -23.6,62.0 L -18.3,63.1 L -13.1,63.8 L -7.9,64.0 L -2.7,63.9 L 2.4,63.3 L 7.4,62.3 L 12.3,60.9 L 17.0,59.2 L 21.4,57.1 L 25.7,54.6 L 29.7,51.9 L 33.4,48.8 L 36.9,45.5 L 40.0,42.0 L 42.8,38.3 L 45.2,34.3 L 47.4,30.3 L 49.1,26.1 L 50.5,21.9 L 51.6,17.6 L 52.2,13.2 L 52.5,8.9 L 52.5,4.6 L 52.1,0.4 L 51.4,-3.8 L 50.4,-7.8 L 49.0,-11.7 L 47.4,-15.4 L 45.5,-18.9 L 43.3,-22.2 L 40.9,-25.3 L 38.2,-28.2 L 35.4,-30.8 L 32.4,-33.1 L 29.3,-35.2 L 26.1,-37.0 L 22.7,-38.4 L 19.3,-39.6 L 15.9,-40.5 L 12.4,-41.1 L 9.0,-41.4 L 5.5,-41.5 L 2.2,-41.2 L -1.1,-40.7 L -4.3,-39.9 L -7.4,-38.9 L -10.4,-37.6 L -13.2,-36.2 L -15.8,-34.5 L -18.2,-32.6 L -20.5,-30.6 L -22.5,-28.4 L -24.4,-26.1 L -26.0,-23.7 L -27.4,-21.2 L -28.5,-18.7 L -29.5,-16.1 L -30.2,-13.4 L -30.6,-10.8 L -30.9,-8.2 L -30.9,-5.6 L -30.7,-3.0 L -30.3,-0.5 L -29.7,1.9 L -29.0,4.2 L -28.0,6.4 L -26.9,8.4 L -25.7,10.4 L -24.3,12.2 L -22.8,13.8 L -21.2,15.3 L -19.5,16.6 L -17.7,17.7 L -15.9,18.7 L -14.1,19.5 L -12.2,20.1 L -10.3,20.6 L -8.4,20.9 L -6.6,21.0 L -4.8,21.0 L -3.0,20.8 L -1.3,20.5 L 0.3,20.0 L 1.9,19.4 L 3.4,18.7 L 4.7,17.9 L 6.0,17.0 L 7.1,16.0 L 8.2,15.0 L 9.1,13.9 L 9.9,12.7 L 10.5,11.5 L 11.1,10.3 L 11.5,9.1 L 11.8,7.9 L 12.0,6.7 L 12.1,5.5 L 12.1,4.4 L 11.9,3.3 L 11.7,2.2 L 11.4,1.2 L 11.0,0.3 L 10.6,-0.6 L 10.1,-1.3 L 9.5,-2.1 L 8.9,-2.7 L 8.3,-3.3 L 7.6,-3.7 L 7.0,-4.1 L 6.3,-4.4 L 5.6,-4.7 L 5.0,-4.9 L 4.3,-5.0 L 3.7,-5.0 L 3.1,-5.0 L 2.5,-4.9 L 2.0,-4.8 L 1.5,-4.8" fill="none" stroke="#0d4f4a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Centre bulb where spiral terminates -->
+    <circle cx="1.5" cy="-4.8" r="10" fill="#0d4f4a"/>
+  </g>
+
+  <!-- Timeline composition on right side -->
+  <g transform="translate(360, 195)">
+    <line x1="0" y1="40" x2="380" y2="40" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Tick marks -->
+    <line x1="0" y1="32" x2="0" y2="48" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="380" y1="32" x2="380" y2="48" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Arrow at right end -->
+    <path d="M 372 28 L 386 40 L 372 52" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- "Now" marker -->
+    <circle cx="0" cy="40" r="9" fill="#0d4f4a"/>
+    <text x="0" y="14" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="18" fill="#0d4f4a">NOW</text>
+    <text x="0" y="76" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="400" font-size="13" fill="#5a5a5a">Apply, no test</text>
+
+    <!-- "Late 2027" marker -->
+    <circle cx="320" cy="40" r="22" fill="none" stroke="#c8102e" stroke-width="2" opacity="0.25"/>
+    <circle cx="320" cy="40" r="14" fill="#c8102e"/>
+    <text x="320" y="0" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="700" font-size="20" fill="#c8102e">LATE 2027</text>
+    <text x="320" y="84" text-anchor="middle" font-family="Lexend, sans-serif" font-weight="400" font-size="13" fill="#5a5a5a">Test required</text>
+  </g>
+</svg>
