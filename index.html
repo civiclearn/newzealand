@@ -1140,6 +1140,148 @@
 </script>
 
 <!-- ===============================
+   INLINE TEST SCRIPT
+================================== -->
+<script>
+(function(){
+var QUESTIONS = [
+  {q:"In what year was the New Zealand Bill of Rights Act passed?", a:["1990","1986","1975"]},
+  {q:"Who is the head of state of New Zealand?", a:["The Monarch","The Prime Minister","The Governor-General"]},
+  {q:"In what year was the Treaty of Waitangi signed?", a:["1840","1852","1907"]},
+  {q:"What electoral system does New Zealand use for general elections?", a:["Mixed Member Proportional (MMP)","First Past the Post","Preferential voting"]},
+  {q:"At what age can a New Zealand citizen vote in general elections?", a:["18","16","21"]},
+  {q:"How often are general elections held in New Zealand?", a:["Every 3 years","Every 4 years","Every 5 years"]},
+  {q:"Which of these was New Zealand the first country in the world to do?", a:["Grant women the right to vote","Establish a public health system","Sign a free trade agreement with Asia"]},
+  {q:"What is the name of New Zealand's parliament?", a:["The House of Representatives","The Senate","The Legislative Council"]},
+  {q:"In how many languages does the Treaty of Waitangi exist as a legally significant text?", a:["Two \u2014 English and M\u0101ori","One \u2014 English","Three \u2014 English, M\u0101ori, French"]},
+  {q:"Which of these rights is protected under the New Zealand Bill of Rights Act?", a:["Freedom of expression","The right to bear arms","The right to free university education"]}
+];
+var CORRECT = "Correct!", WRONG = "Correct answer:", PROG = "Progress";
+var R_GREAT = "Excellent work!", R_GOOD = "Good result!", R_START = "A solid start.", R_KEEP = "Keep practising!";
+var R_TEXT = 'You\'ve just tried a few sample questions. The full platform will have <strong>800+ practice questions across all six topics</strong> with detailed explanations.';
+var R_CTA = "Join the waitlist";
+var R_CTA_HREF = "#waitlist";
+
+function shuffle(q){
+  var c = q.a.map(function(o,i){return{t:o, c:i===0}});
+  for (var i=c.length-1; i>0; i--){
+    var j = Math.floor(Math.random()*(i+1));
+    var tmp = c[i]; c[i]=c[j]; c[j]=tmp;
+  }
+  q.a = c.map(function(x){return x.t});
+  q.correct = c.findIndex(function(x){return x.c});
+}
+QUESTIONS.forEach(function(q){q.correct=0; shuffle(q);});
+
+var container = document.getElementById("inline-test-questions");
+var total = QUESTIONS.length, score = 0, answered = 0, currentRow = 0;
+var ROWS = []; for (var i=0; i<total; i+=3) ROWS.push(QUESTIONS.slice(i, i+3));
+var rowCounts = new Array(ROWS.length).fill(0);
+
+function updateProg(){
+  var el = document.getElementById("inline-progress-text");
+  if (el) el.textContent = PROG + ": " + answered + " / " + total;
+  var bar = document.getElementById("inline-progressbar");
+  if (bar) bar.style.width = ((answered/total)*100) + "%";
+}
+
+function donut(pct){
+  var C = 2*Math.PI*40;
+  return '<div class="donut-wrapper"><svg width="120" height="120" viewBox="0 0 100 100">' +
+    '<circle cx="50" cy="50" r="40" stroke="rgba(0,0,0,0.08)" stroke-width="12" fill="none"></circle>' +
+    '<circle cx="50" cy="50" r="40" stroke="#c8102e" stroke-width="12" fill="none" ' +
+    'stroke-dasharray="' + ((pct/100)*C) + ' ' + ((1-pct/100)*C) + '" ' +
+    'transform="rotate(-90 50 50)" stroke-linecap="round"></circle></svg>' +
+    '<div class="donut-center">' + pct + '%</div></div>';
+}
+
+function endCard(){
+  var pct = Math.round((score/total)*100);
+  var t = pct>=80 ? R_GREAT : pct>=50 ? R_GOOD : pct>=25 ? R_START : R_KEEP;
+  var d = document.createElement("div");
+  d.className = "inline-question-card end-card";
+  d.innerHTML = '<h3>' + t + '</h3>' + donut(pct) + '<p style="margin: 1rem 0; color: var(--text-muted);">' + R_TEXT + '</p>' +
+    '<a href="' + R_CTA_HREF + '" class="hero-primary-btn" style="display: inline-block; margin-top: 0.5rem;">' + R_CTA + '</a>';
+  return d;
+}
+
+function renderRow(ri){
+  if (!ROWS[ri]) return;
+  ROWS[ri].forEach(function(q, off){
+    var ai = ri*3 + off;
+    container.appendChild(makeCard(q, ai, ri));
+  });
+}
+
+function makeCard(q, ai, ri){
+  var card = document.createElement("div");
+  card.className = "inline-question-card";
+  var h = document.createElement("h3");
+  h.textContent = q.q;
+  card.appendChild(h);
+  var fb = document.createElement("div");
+  fb.className = "inline-feedback";
+  q.a.forEach(function(opt, i){
+    var btn = document.createElement("button");
+    btn.className = "inline-option-btn";
+    btn.textContent = opt;
+    btn.onclick = function(){
+      answered++;
+      rowCounts[ri]++;
+      updateProg();
+      var btns = card.querySelectorAll("button");
+      btns.forEach(function(b){b.disabled = true;});
+      if (i === q.correct){
+        score++;
+        btn.style.background = "rgba(20, 128, 90, 0.12)";
+        btn.style.borderColor = "#14805a";
+        btn.style.color = "#14805a";
+        fb.textContent = CORRECT;
+        fb.classList.add("inline-correct");
+      } else {
+        btn.style.background = "rgba(153, 27, 27, 0.1)";
+        btn.style.borderColor = "#991b1b";
+        btn.style.color = "#991b1b";
+        btns[q.correct].style.background = "rgba(20, 128, 90, 0.12)";
+        btns[q.correct].style.borderColor = "#14805a";
+        btns[q.correct].style.color = "#14805a";
+        fb.textContent = WRONG + " " + q.a[q.correct];
+        fb.classList.add("inline-wrong");
+      }
+      card.appendChild(fb);
+      if (ai === total - 1){
+        setTimeout(function(){container.appendChild(endCard());}, 350);
+        return;
+      }
+      if (rowCounts[ri] === ROWS[ri].length){
+        currentRow++;
+        setTimeout(function(){renderRow(currentRow);}, 200);
+      }
+    };
+    card.appendChild(btn);
+  });
+  return card;
+}
+
+renderRow(0);
+updateProg();
+})();
+
+// ===============================
+// FAQ TOGGLE
+// ===============================
+document.querySelectorAll(".faq-item").forEach(function(item){
+  var q = item.querySelector(".faq-question");
+  q.addEventListener("click", function(){
+    document.querySelectorAll(".faq-item").forEach(function(i){
+      if (i !== item) i.classList.remove("open");
+    });
+    item.classList.toggle("open");
+  });
+});
+</script>
+
+<!-- ===============================
    WAITLIST FORM → N8N → GOOGLE SHEET
 ================================== -->
 <script>
