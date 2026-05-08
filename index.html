@@ -391,6 +391,92 @@
     .feature-card:hover .arrow { transform: translateX(3px); }
 
     /* ===============================
+       ARTICLES HOME SECTION
+    ================================== */
+    .articles-home {
+      padding: 4rem 0 4rem;
+      border-top: 1px solid var(--border);
+    }
+    .articles-home-grid {
+      max-width: 1080px;
+      margin: 0 auto 2.4rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .articles-home-card {
+      background: var(--surface);
+      border-radius: 1.1rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      display: flex; flex-direction: column;
+      color: inherit;
+    }
+    .articles-home-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-deep);
+    }
+    .articles-home-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      background: var(--surface-warm);
+    }
+    .articles-home-card-body {
+      padding: 1.2rem 1.3rem 1.4rem;
+      flex: 1;
+      display: flex; flex-direction: column;
+    }
+    .articles-home-card-cat {
+      display: inline-block;
+      background: var(--surface-warm);
+      color: var(--accent-deep);
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+      align-self: flex-start;
+    }
+    .articles-home-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.45rem;
+      line-height: 1.4;
+      letter-spacing: -0.005em;
+    }
+    .articles-home-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .articles-home-cta { text-align: center; }
+    .articles-home-cta a {
+      display: inline-block;
+      background: var(--surface);
+      color: var(--primary);
+      border: 2px solid var(--border-strong);
+      padding: 0.78rem 1.9rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+    .articles-home-cta a:hover {
+      border-color: var(--primary);
+      background: var(--surface-warm);
+    }
+
+    /* ===============================
        INLINE TEST DEMO
     ================================== */
     .inline-test {
@@ -714,7 +800,8 @@
     </a>
 
     <nav class="cl-nav">
-      <a href="#features">About the test</a>
+      <a href="/about-the-test/">About the test</a>
+      <a href="/articles/">Articles</a>
       <a href="#questions-demo">Free sample</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -857,6 +944,21 @@
 </section>
 </div>
 
+<!-- ARTICLES HOME -->
+<section class="articles-home" id="articles-home">
+  <div class="section-heading">
+    <div class="section-kicker">Articles &amp; guides</div>
+    <h2 class="section-title">Read up on the new test</h2>
+    <p class="section-lead">
+      Reference, explainers, and decision guides — everything we know about the new test, regularly updated as DIA publishes more detail.
+    </p>
+  </div>
+  <div id="articles-home-grid" class="articles-home-grid"></div>
+  <div class="articles-home-cta">
+    <a href="/articles/">View all articles &rsaquo;</a>
+  </div>
+</section>
+
 <!-- WAITLIST -->
 <section class="waitlist-section" id="waitlist">
   <div class="section-heading">
@@ -982,13 +1084,62 @@
   <div class="footer-inner">
     <div>© 2026 Citizenship-Test.nz — part of the CivicLearn network.</div>
     <div class="footer-links">
-      <a href="#features">About</a>
+      <a href="/about-the-test/">About</a>
+      <a href="/articles/">Articles</a>
       <a href="#questions-demo">Free sample</a>
       <a href="#faq">FAQ</a>
       <a href="#waitlist">Waitlist</a>
     </div>
   </div>
 </footer>
+
+<!-- ===============================
+   ARTICLES HOME LOADER
+================================== -->
+<script>
+(async function(){
+  var grid = document.getElementById('articles-home-grid');
+  if (!grid) return;
+
+  function escapeHtml(s){
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  try {
+    var res = await fetch('/articles/articles.json');
+    if (!res.ok) throw new Error('articles.json missing');
+    var articles = await res.json();
+    articles = articles.filter(function(a){ return !a.lang || a.lang === 'en'; });
+    articles.sort(function(a, b){ return (b.date || '').localeCompare(a.date || ''); });
+    var picks = articles.slice(0, 3);
+    if (picks.length === 0) {
+      // Hide the section entirely if there are no articles
+      var section = document.getElementById('articles-home');
+      if (section) section.style.display = 'none';
+      return;
+    }
+    grid.innerHTML = picks.map(function(a){
+      return '<a href="/articles/' + encodeURIComponent(a.slug) + '/" class="articles-home-card">' +
+        '<img src="' + escapeHtml(a.image) + '" alt="' + escapeHtml(a.title) + '" loading="lazy"/>' +
+        '<div class="articles-home-card-body">' +
+          '<span class="articles-home-card-cat">' + escapeHtml(a.category) + '</span>' +
+          '<h3>' + escapeHtml(a.title) + '</h3>' +
+          '<p>' + escapeHtml(a.excerpt) + '</p>' +
+        '</div>' +
+      '</a>';
+    }).join('');
+  } catch (err) {
+    console.error('Articles load error:', err);
+    var section = document.getElementById('articles-home');
+    if (section) section.style.display = 'none';
+  }
+})();
+</script>
 
 <!-- ===============================
    INLINE TEST SCRIPT
